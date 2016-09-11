@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- FtcCommon manifest -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.qualcomm.ftccommon"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="19"
         android:targetSdkVersion="19" />
 
     <uses-permission
@@ -37,7 +38,7 @@
             android:name="com.qualcomm.ftccommon.configuration.FtcLoadFileActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
-            android:label="@string/title_activity_load" >
+            android:label="@string/configure_activity" >
             <intent-filter>
                 <action android:name="com.qualcomm.ftccommon.configuration.FtcLoadFileActivity.intent.action.Launch" />
 
@@ -45,18 +46,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.qualcomm.ftccommon.configuration.AutoConfigureActivity"
+            android:name="com.qualcomm.ftccommon.configuration.ConfigureFromTemplateActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
-            android:label="@string/title_activity_autoconfigure" >
+            android:label="@string/title_activity_configfromtemplate" >
             <intent-filter>
-                <action android:name="com.qualcomm.ftccommon.configuration.FtcAutoconfigureActivity.intent.action.Launch" />
+                <action android:name="com.qualcomm.ftccommon.configuration.ConfigureFromTemplateActivity.intent.action.Launch" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qualcomm.ftccommon.ViewLogsActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/view_logs_activity" >
+            <intent-filter>
+                <action android:name="com.qualcomm.ftccommon.ViewLogsActivity.intent.action.Launch" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.qualcomm.ftccommon.configuration.FtcConfigurationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.qualcomm.ftccommon.configuration.FtcNewFileActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
@@ -75,16 +92,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.qualcomm.ftccommon.ViewLogsActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/view_logs_activity" >
-            <intent-filter>
-                <action android:name="com.qualcomm.ftccommon.ViewLogsActivity.intent.action.Launch" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.qualcomm.ftccommon.AboutActivity"
             android:label="@string/about_activity" >
             <intent-filter>
@@ -94,13 +101,31 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.qualcomm.ftccommon.configuration.EditSwapUsbDevices"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/edit_swap_devices_activity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
             android:name="com.qualcomm.ftccommon.configuration.EditMotorControllerActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/edit_motor_controller_activity"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
+            android:name="com.qualcomm.ftccommon.configuration.EditMotorListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/edit_motor_controller_activity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
             android:name="com.qualcomm.ftccommon.configuration.EditServoControllerActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/edit_servo_controller_activity"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.qualcomm.ftccommon.configuration.EditServoListActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/edit_servo_controller_activity"
             android:windowSoftInputMode="stateHidden|adjustResize" >

@@ -2,7 +2,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".FtcFileLoadActivity"
+                tools:context=".configuration.FtcLoadFileActivity"
                 android:orientation="vertical">
 
     <include layout="@layout/header"
@@ -24,11 +24,11 @@
       android:id="@+id/new_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="New"
+      android:text="@string/buttonNameNew"
       android:textSize="16sp"
       android:minHeight="0dp"
       android:minWidth="0dp"
-      android:onClick="new_button"/>
+      android:onClick="onNewButtonPressed"/>
 
     <!-- red line -->
     <View
@@ -36,23 +36,44 @@
       android:layout_height="2dip"
       android:background="#FF0000" />
 
-    <RelativeLayout
-      android:id="@+id/files_holder"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
-      <TextView
-        android:text="Available files:"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="14sp"/>
+        android:stretchColumns="0"
+        android:shrinkColumns="0">
 
-      <include
-        layout="@layout/info_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"/>
+        <TableRow
+            android:id="@+id/files_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/availableConfigListCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:id="@+id/textView"/>
+
+                <TextView
+                    android:id="@+id/readOnlyExplanation"
+                    android:text="@string/readOnlyExplanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <include
+                layout="@layout/info_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+        </TableRow>
+    </TableLayout>
 
     <ScrollView
       android:fillViewport="true"
@@ -93,18 +114,18 @@
     <RelativeLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:id="@+id/autoconfigure_holder"
+      android:id="@+id/configureFromTemplateArea"
       android:orientation="horizontal">
 
       <Button
-        android:id="@+id/autoconfigure"
+        android:id="@+id/configureFromTemplate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:minHeight="0dp"
         android:minWidth="0dp"
-        android:onClick="launch_autoConfigure"
-        android:text="@string/autoconfigure" />
+        android:onClick="onConfigureFromTemplatePressed"
+        android:text="@string/configureFromTemplate" />
 
       <include
         layout="@layout/info_button"
@@ -113,4 +134,3 @@
     </RelativeLayout>
   </LinearLayout>
 </RelativeLayout>
-<!-- From: file:/Users/tom/Documents/workspace/ftc_sdk/lib/FtcCommon/src/main/res/layout/activity_load.xml -->

@@ -35,6 +35,13 @@
           android:maxLength="200"
           android:text="@string/filename_editText">
         </TextView>
+        <TextView
+            android:id="@+id/configIsReadOnlyFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/readOnlyConfigFeedback"
+            />
         <LinearLayout
           android:id="@+id/horizontalButtons"
           android:layout_width="wrap_content"
@@ -45,38 +52,31 @@
             android:id="@+id/file_edit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="3dp"
             android:layout_marginEnd="3dp"
             android:textSize="16sp"
             android:text="@string/file_edit_button"
-            android:onClick="file_edit_button"/>
+            android:onClick="onFileEditButtonPressed"/>
 
           <Button
             android:id="@+id/file_activate_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="3dp"
             android:layout_marginEnd="3dp"
             android:textSize="16sp"
             android:text="@string/file_activate_button"
-            android:onClick="file_activate_button"/>
+            android:onClick="onFileActivateButtonPressed"/>
 
           <Button
             android:id="@+id/file_delete_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="3dp"
             android:layout_marginEnd="3dp"
             android:textSize="16sp"
             android:text="@string/file_delete_button"
-            android:onClick="file_delete_button"/>
+            android:onClick="onFileDeleteButtonPressed"/>
         </LinearLayout>
       </LinearLayout>
     </TableRow>
   </TableLayout>
-  <ListView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/controllers"/>
+
 </LinearLayout>
-<!-- From: file:/Users/tom/Documents/workspace/ftc_sdk/lib/FtcCommon/src/main/res/layout/file_info.xml -->

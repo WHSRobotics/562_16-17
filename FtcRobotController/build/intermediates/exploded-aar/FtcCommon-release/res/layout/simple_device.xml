@@ -25,11 +25,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/dropdown_layout">
                 <Spinner
-                    android:id="@+id/choiceSpinner_legacyModule"
+                    android:id="@+id/choiceSpinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:drawable/btn_dropdown"
-                    android:entries="@array/choice_array"
+                    android:entries="@array/choice_array_legacy_module"
                     android:prompt="@string/choice_prompt"
                     android:spinnerMode="dropdown" />
             </RelativeLayout>
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/editTextResult_name"
+                    android:id="@+id/editTextResult"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
@@ -49,23 +49,23 @@
                 </EditText>
 
                 <TextView
-                    android:id="@+id/titleTextView_analogInput7"
+                    android:id="@+id/titleTextView"
                     android:layout_marginBottom="5dp"
-                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/editTextResult_name"
+                    android:layout_below="@id/editTextResult"
                     android:text="@string/name_prompt_undertext">
                 </TextView>
 
                 <Button
                     android:id="@+id/edit_controller_btn"
                     android:layout_width="wrap_content"
-                    android:layout_below="@id/titleTextView_analogInput7"
+                    android:layout_below="@id/titleTextView"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
                     android:layout_marginTop="0dp"
                     android:text="@string/edit_controller"
                     android:onClick="editController_portALL"
@@ -73,4 +73,3 @@
             </RelativeLayout>
         </LinearLayout>
 </merge>
-<!-- From: file:/Users/tom/Documents/workspace/ftc_sdk/lib/FtcCommon/src/main/res/layout/simple_device.xml -->

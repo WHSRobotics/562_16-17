@@ -17,7 +17,6 @@
       android:layout_marginStart="5dp"
       android:layout_marginEnd="5dp"
       android:layout_marginRight="5dp"
-      android:layout_alignParentRight="true"
       android:layout_alignParentEnd="true"
 
       android:background="@drawable/button_shape"
@@ -27,4 +26,3 @@
       android:shadowRadius="5"
       />
 </merge>
-<!-- From: file:/Users/tom/Documents/workspace/ftc_sdk/lib/FtcCommon/src/main/res/layout/info_button.xml -->

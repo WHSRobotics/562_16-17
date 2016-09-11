@@ -1,21 +1,19 @@
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
-
-  <TableRow
-    android:id="@+id/row_port_pwm"
+  <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_port"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="2dip" >
 
     <TextView
-      android:id="@+id/port_number_pwm"
+      android:id="@+id/port_number"
       android:textStyle="bold"
       android:textSize="22sp"
-      android:paddingRight="5dp"
-      android:paddingLeft="5dp"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
       android:text="0"/>
 
     <CheckBox
-      android:id="@+id/checkbox_port_pwm"
+      android:id="@+id/checkbox_port"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"/>
 
@@ -24,26 +22,23 @@
       android:layout_height="wrap_content">
 
       <EditText
-        android:id="@+id/editTextResult_pwm"
+        android:id="@+id/editTextResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:inputType="text"
         android:maxLength="200"
         android:hint="@string/input_name_hint">
       </EditText>
 
       <TextView
-        android:id="@+id/titleTextView_pwm"
+        android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextResult_pwm"
+        android:layout_below="@id/editTextResult"
         android:text="@string/input_name_label">
       </TextView>
     </RelativeLayout>
   </TableRow>
 
-
-</merge>
-<!-- From: file:/Users/tom/Documents/workspace/ftc_sdk/lib/FtcCommon/src/main/res/layout/pwm_device.xml -->
