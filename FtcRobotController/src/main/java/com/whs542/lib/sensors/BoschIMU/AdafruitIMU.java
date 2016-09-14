@@ -1,4 +1,4 @@
-package newinventions;
+package com.whs542.lib.sensors.BoschIMU;
 
 import android.util.Log;
 
@@ -660,7 +660,12 @@ public class AdafruitIMU implements HardwareDevice, I2cController.I2cPortReadyCa
     return BNO055_ID;
   } //Temporarily
 
-  public void close() {
+  public void close() {}
+
+  public Manufacturer getManufacturer() {
+    return null;
   }
+
+  public void resetDeviceConfigurationForOpMode() {}
 
 }
